@@ -15,7 +15,7 @@ export default function Home() {
       try {
         const response = await fetchVideos(); // Axios
         if (cancelled) return;
-        setVideos(response.data?.videos || []);
+        setVideos(response.data || []);
       } catch (err) {
         if (cancelled) return;
         console.error(err);
