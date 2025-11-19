@@ -11,7 +11,7 @@ import moment from "moment";
 
 function Card({ video }) {
   return (
-    <Link to={`/${video?.id}`}>
+    <Link to={`/${video?.url}`}>
       <div className="flex flex-col mb-8">
         <div className="relative h-48 md:h-52 rounded-2xl overflow-hidden">
           <img
@@ -32,7 +32,7 @@ function Card({ video }) {
             </div>
             <div className="flex flex-col ml-3 overflow-hidden">
               <span className="text-sm font-semibold line-clamp-2 text-black dark:text-white">
-                {video?.title}
+                {video?.url}
               </span>
               <span className="text-[12px] font-semibold text-black/[0.7] dark:text-white/[0.7] flex items-center ">
                 Tonton du bled
